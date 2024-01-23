@@ -56,3 +56,4 @@ https://huggingface.co/honopiofil/bert_for_products
 ## Online inference
 To check model online in inference mode see:
 https://huggingface.co/spaces/honopiofil/furnitures_from_url
+One can either use the attached website examples or type in one's own addresses.
