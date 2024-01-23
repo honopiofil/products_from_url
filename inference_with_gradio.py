@@ -15,7 +15,7 @@ if args.model_path is None:
 classifier = pipeline('ner',
                       model=args.model_path,
                       aggregation_strategy='simple')
-#classifier = pipeline('ner', model=args.model_path, aggregation_strategy='simple')
+
 
 def get_url_content(url):
     try:
