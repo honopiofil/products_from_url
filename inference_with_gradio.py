@@ -6,11 +6,14 @@ from bs4 import BeautifulSoup
 from argparse import ArgumentParser
 
 parser = ArgumentParser()
-parser.add_argument('model_path')
+parser.add_argument('model_path', nargs='?')
 args = parser.parse_args()
 
+if args.model_path is None:
+    args.model_path = 'honopiofil/bert_for_products'
+
 classifier = pipeline('ner',
-                      model='/home/pawel/Documents/Furniture_Stores/FT_url_prods_bert-base-NER/checkpoint-2397',
+                      model=args.model_path,
                       aggregation_strategy='simple')
 #classifier = pipeline('ner', model=args.model_path, aggregation_strategy='simple')
 
